@@ -1,7 +1,13 @@
 
-const Day = () => {
+const Day = ({day, onClick}) => {
+
+    const className = `day ${day.value === 'padding' ? 'padding' : ''} ${day.isCurrentDay ? 'currentDay' : ''}`
     return(
-        <h1>Hello from The Day Component</h1>
+        <div onClick={onClick} className={className}>
+            {day.value === 'padding' ? '' : day.value}
+
+            {day.event && <div className='event'>{day.event.title}</div>}
+        </div>
     )
 }
 
