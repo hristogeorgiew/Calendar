@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import './App.css';
 import Day from './components/Day/Day';
+import CalendarHeader from './components/CalendarHeader/CalendarHeader';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <CalendarHeader />
       <Day />
     </div>
   );
